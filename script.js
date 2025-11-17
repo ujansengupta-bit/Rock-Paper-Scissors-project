@@ -7,7 +7,6 @@ function getComputerChoice() {
     if (r <= 2/3) return "paper";
     return "scissors";
 }
-
 function getHumanChoice() {
     let choice = prompt("Choose Rock, Paper, or Scissors:");
     if (!choice) return null;
@@ -52,4 +51,13 @@ function playRound(humanChoice, computerChoice) {
     console.log("Your Score:", humanScore, "Computer Score:", computerScore);
 }
 
-playRound(getHumanChoice(), getComputerChoice());
+while (true) {
+    const human = getHumanChoice();
+    if (human === null) {
+        console.log("Game ended.");
+        break;
+    }
+
+    const computer = getComputerChoice();
+    playRound(human, computer);
+}
