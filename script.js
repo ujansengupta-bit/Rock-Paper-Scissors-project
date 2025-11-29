@@ -20,8 +20,8 @@ function resetgame(){
     humanScore = 0;
     computerScore = 0;
 
-    results.textContent = "Choose Rock, Paper, or Scissors to start a new game!";
-    score.textContent = "YOU: 0  Computer: 0";
+    results.innerHTML = "<p>Choose: Rock, Paper, or Scissors to start a new game!</p>";
+    score.innerHTML = "<p>YOU: 0</p> <p>Computer: 0</p>";
 
     unpause();
 }
@@ -43,6 +43,7 @@ function playRound(humanChoice, computerChoice) {
 
     if (humanChoice === computerChoice) {
         roundResult = 'DRAW!!! Both choose: '  + humanChoice;
+        results.innerHTML = "<p>" + roundResult + "</p>";
         return;
     }
 
@@ -52,21 +53,21 @@ function playRound(humanChoice, computerChoice) {
         (humanChoice === "scissors" && computerChoice === "rock");
 
     if (youLose) {
-        roundResult = 'You LOSE!!! Computer choose: ' + computerChoice
+        roundResult = "<p>You LOSE!!!</p>"  + "<p> Computer choose: " + computerChoice + "</p>"
         computerScore++;
     } else {
-        roundResult = 'You WIN!!! Computer choose: ' + computerChoice
+        roundResult = "<p>You WIN!!!</p>"   + "<p> Computer choose: " + computerChoice + "</p>"
         humanScore++;
     }
-    results.textContent = roundResult;
-    score.textContent   = 'YOU: ' + humanScore + '  Computer: ' + computerScore
+    results.innerHTML = "<p>" + roundResult + "</p>";
+    score.innerHTML   = "<p>YOU:" + humanScore + "</p><p>Computer: " + computerScore + "</p>"
 
     if(humanScore === 5) {
-        results.textContent += "   GAME OVER: YOU WON!!!!"
+        results.innerHTML += "<p>GAME OVER: YOU WON!!!!</p>"
         pause();
     }
     if(computerScore === 5) {
-        results.textContent += "   GAME OVER COMPUTER WON!!!!"
+        results.innerHTML += "<p>GAME OVER COMPUTER WON!!!!</p>"
         pause();
     }
 }

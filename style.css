@@ -1,0 +1,81 @@
+body {
+    background-color: aquamarine;
+}
+
+h1{
+    background-color: blue;
+    color: red;
+    display: flex;
+    font-size: 60px;
+    border: 10px solid black;
+    border-radius: 8px;
+    padding: 30px;
+    justify-content: center;
+    width: fit-content;
+    align-items: center;
+    margin: 50px auto;
+}
+
+.choice{
+    background-color: blueviolet;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 50px;
+    border: 10px solid black;
+    border-radius: 8px;
+    width: fit-content;
+    margin: 50px auto;
+}
+
+#rock{
+    background-color: brown;
+    font-size: 30px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+#paper{
+    background-color: green;
+    font-size: 30px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+#scissors{
+    background-color:gold;
+    font-size: 30px;
+    border: 5px solid black;
+    border-radius: 10px;
+}
+
+#results{
+    background-color: rgb(112, 1, 92);
+    color: rgb(255, 112, 255);
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    height: fit-content;
+    font-weight: 500;
+    border: 5px solid black;
+    border-radius: 10px;
+    gap: 10px;
+}
+
+#score{
+    display: block;
+    margin: 50px auto;
+    border: 5px solid black;
+    border-radius: 10px;
+    width: fit-content;
+    background-color: coral;
+    color: rgb(82, 0, 197);
+}
+
+#reset{
+    display: block;
+    margin: 50px auto;
+    background-color: navy;
+    color: cornsilk;
+    border: 3px solid black;
+    border-radius: 10px;
+}
